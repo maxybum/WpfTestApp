@@ -1,0 +1,187 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\CharacterGrowFont.png" />
+    <None Remove="Images\CharacterShrinkFont.png" />
+    <None Remove="Images\EditCopy.png" />
+    <None Remove="Images\EditCut.png" />
+    <None Remove="Images\EditPaste.png" />
+    <None Remove="Images\FileOpen.png" />
+    <None Remove="Images\FileSave.png" />
+    <None Remove="Images\Font\Bold16.png" />
+    <None Remove="Images\Font\Italic16.png" />
+    <None Remove="Images\Font\Strikethrough16.png" />
+    <None Remove="Images\Font\Underline16.png" />
+    <None Remove="Images\Image.png" />
+    <None Remove="Images\Insert\Hyperlink16.png" />
+    <None Remove="Images\Insert\Picture16.png" />
+    <None Remove="Images\Insert\Table16.png" />
+    <None Remove="Images\Paragraph\AlignTextCenter16.png" />
+    <None Remove="Images\Paragraph\AlignTextJustify16.png" />
+    <None Remove="Images\Paragraph\AlignTextLeft16.png" />
+    <None Remove="Images\Paragraph\AlignTextRight16.png" />
+    <None Remove="Images\Paragraph\Bullets16.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Arrow.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Circle.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Dot.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Flower.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Image.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_None.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Square.png" />
+    <None Remove="Images\Paragraph\Bullets\Bullet_Tick.png" />
+    <None Remove="Images\Paragraph\DecreaseIndent16.png" />
+    <None Remove="Images\Paragraph\IncreaseIndent16.png" />
+    <None Remove="Images\Paragraph\Numbering16.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_LowLetter_Brace.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_LowLetter_Dot.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_LowRoman.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_None.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_Number_Brace.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_Number_Dot.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_UpLetter.png" />
+    <None Remove="Images\Paragraph\Numbering\Numbering_UpRoman.png" />
+    <None Remove="Images\Print.png" />
+    <None Remove="Images\Redo16.png" />
+    <None Remove="Images\Undo16.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unity.Container" Version="5.11.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CharacterGrowFont.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CharacterShrinkFont.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\EditCopy.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\EditCut.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\EditPaste.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\FileSave.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\FileOpen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Font\Bold16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Font\Italic16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Font\Strikethrough16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Font\Underline16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Image.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Insert\Hyperlink16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Insert\Picture16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Insert\Table16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\AlignTextCenter16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\AlignTextJustify16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\AlignTextLeft16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\AlignTextRight16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Arrow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Circle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Dot.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Flower.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Image.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_None.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Square.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Bullets\Bullet_Tick.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\DecreaseIndent16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\IncreaseIndent16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_LowLetter_Brace.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_LowLetter_Dot.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_LowRoman.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_None.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_Number_Brace.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_Number_Dot.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_UpLetter.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Paragraph\Numbering\Numbering_UpRoman.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Print.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Redo16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Undo16.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
