@@ -46,14 +46,28 @@
                     <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Redo" ToolTip="Redo">
                         <Image Source="Images\Redo16.png"></Image>
                     </Button>
+                    <StackPanel Orientation="Horizontal">
+                        <RibbonToggleButton Command="EditingCommands.ToggleBold" Name="btnBold" SmallImageSource="Images/bold.png"/>
 
-                    <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
-                        <TextBlock FontWeight="Bold">B</TextBlock>
-                    </Button>
-                    <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                        <RibbonToggleButton Command="EditingCommands.ToggleItalic" Name="btnItalic" SmallImageSource="Images/italic.png"/>
+
+                        <RibbonToggleButton Command="EditingCommands.ToggleUnderline" Name="btnUnderline" SmallImageSource="Images/UnderLine.png" />
+
+
+                      
+                   
+                        <RibbonRadioButton x:Name="_btnAlignLeft" ToolTip="Align Text Left" Command="EditingCommands.AlignLeft" CommandTarget="{Binding ElementName=_richTextBox}" SmallImageSource="Images/LeftAlign.png" />
+                        <RibbonRadioButton x:Name="_btnAlignCenter" Label="" ToolTip="Center" Command="EditingCommands.AlignCenter" CommandTarget="{Binding ElementName=_richTextBox}" SmallImageSource="Images/center2.png" />
+                        <RibbonRadioButton x:Name="_btnAlignRight" Label="" ToolTip="Align Text Right" Command="EditingCommands.AlignRight" CommandTarget="{Binding ElementName=_richTextBox}" SmallImageSource="Images/RightAlign.png"/>
+                        <RibbonRadioButton x:Name="_btnAlignJustify" Label="" Command="EditingCommands.AlignJustify" CommandTarget="{Binding ElementName=_richTextBox}" SmallImageSource="Images/center.png"/>
+                        <RibbonRadioButton x:Name="_btnNumbers" Label="" ToolTip="Numbering" Command="EditingCommands.ToggleNumbering" CommandTarget="{Binding ElementName=_richTextBox}" SmallImageSource="Images/Numbered.png"/>
+                        <RibbonRadioButton x:Name="_btnBullets" Label="" ToolTip="Bullets" Command="EditingCommands.ToggleBullets" CommandTarget="{Binding ElementName=_richTextBox}" SmallImageSource="Images/bullets.png"/>
+                    </StackPanel>
+
+                    <Button Style="{StaticResource formatTextStyle}"  Command="EditingCommands.ToggleItalic" ToolTip="Italic">
                         <TextBlock FontStyle="Italic" FontWeight="Bold">I</TextBlock>
                     </Button>
-                    <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                    <Button Style="{StaticResource formatTextStyle}"  Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
                         <TextBlock TextDecorations="Underline" FontWeight="Bold">U</TextBlock>
                     </Button>
 
@@ -69,24 +83,12 @@
                     <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
                         <Image Source="Images\CharacterShrinkFont.png"></Image>
                     </Button>
-                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
-                        <Image Source="Images/Paragraph/Bullets16.png"></Image>
-                    </Button>
-                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
-                        <Image Source="Images/Paragraph/Numbering16.png"></Image>
-                    </Button>
-                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
-                        <Image Source="Images/Paragraph/AlignTextLeft16.png"></Image>
-                    </Button>
-                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="Align Center">
-                        <Image Source="Images/Paragraph/AlignTextCenter16.png"></Image>
-                    </Button>
-                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="Align Right">
-                        <Image Source="Images/Paragraph/AlignTextRight16.png"></Image>
-                    </Button>
-                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
-                        <Image Source="Images/Paragraph/AlignTextJustify16.png"></Image>
-                    </Button>
+                
+                
+                 
+
+ 
+                 
                     <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
                         <Image Source="Images/Paragraph/IncreaseIndent16.png"></Image>
                     </Button>
@@ -94,12 +96,20 @@
                         <Image Source="Images/Paragraph/DecreaseIndent16.png"></Image>
                     </Button>
 
+                    <Button Click="ChangeAllUrlToHyperlink" >
+                        <Button.ToolTip>
+                            <ToolTip>
+                                Click to change all URLs to HyperLinks
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <Image Height="30" Width="30" Source="Images/link.png"></Image>
+                    </Button>
                 </ToolBar>
 
 
                 <!-- By default pressing tab moves focus to the next control. Setting AcceptsTab to true allows the 
                RichTextBox to accept tab characters. -->
-                <RichTextBox VerticalScrollBarVisibility="Visible" Margin="0,0,0,0" Width="900" Height="400" Name="mainRTB" AcceptsTab="True" MinHeight="400"/>
+                <RichTextBox VerticalScrollBarVisibility="Visible" SelectionChanged="rtbEditor_SelectionChanged" Margin="0,0,0,0" Width="950" Height="400" Name="mainRTB" AcceptsTab="True" MinHeight="400"/>
             </DockPanel>
         </Viewbox>
     </Grid>
